@@ -1,0 +1,39 @@
+html {background-color: #fff
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.topnav {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.topnav a{
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.topnav a.active {
+    background-color: #04aa6d;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+.homepicture {
+    display:block;
+    margin:50px 150px;
+}
