@@ -3,20 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
         <title>Portfolio</title>
         <link rel="stylesheet" href="/css/index.css" />
         <script src="/js/index.js" defer></script>
     </head>
     <body>
+        <div class="progressContainer">
+            <div id="myBar"></div>
+        </div>
         <header>
             <div id="nameContainer">
                 <h2>Chris</h2>
             </div>
             <ul id="infoTabContainer">
-                <li class="experience infoTab">Experience</li>
-                <li class="work infoTab">Work</li>
-                <li class="projects infoTab">Projects</li>
-                <li class="contact infoTab">Contact</li>
+                <a class="experience infoTab" href="#workExperienceText"
+                    >Experience</a
+                >
+                <a class="work infoTab" href="#projects">Work</a>
+                <a class="projects infoTab" href="#projects">Projects</a>
+                <a class="contact infoTab" href="#workExperienceText"
+                    >Contact</a
+                >
             </ul>
         </header>
         <div class="heroSection">
@@ -48,17 +61,17 @@
                     </p>
                 </div>
                 <ul id="workExperienceContainer">
-                    <li>
+                    <li class="hidden workExperience">
                         <h3>01</h3>
                         <p><span>Color text for company</span>company</p>
                         <p>short summary</p>
                     </li>
-                    <li>
+                    <li class="hidden workExperience">
                         <h3>02</h3>
                         <p><span>Color text for company</span>company</p>
                         <p>short summary</p>
                     </li>
-                    <li>
+                    <li class="hidden workExperience">
                         <h3>03</h3>
                         <p><span>Color text for company</span>company</p>
                         <p>short summary</p>
@@ -68,13 +81,7 @@
             <div class="philosopyContainer">
                 <div class="philosophyTextContainer">
                     <h2>Philosopy & values</h2>
-                    <p>
-                        Dummy answer I think everyone wants the same thing -
-                        relationship with humanity, peace with the metaphysical,
-                        and experience with the universe. I try to grasp these
-                        things with my values: authenticity, creativity, &
-                        hospitality.
-                    </p>
+                    <p>Dummy answer</p>
                     <a href="#">More about me</a>
                 </div>
                 <div class="philosopyImgContainer">
@@ -90,17 +97,53 @@
                     <p>Skillset Text</p>
                 </div>
                 <ul class="skillsets">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                    <li>
+                        <h2>heading</h2>
+                        <p>paragraph paragraph paragraph paragraph</p>
+                    </li>
+                    <li>
+                        <h2>heading</h2>
+                        <p>paragraph</p>
+                    </li>
+                    <li>
+                        <h2>heading</h2>
+                        <p>paragraph</p>
+                    </li>
+                    <li>
+                        <h2>heading</h2>
+                        <p>paragraph</p>
+                    </li>
                 </ul>
             </div>
             <div class="coolCarousel"></div>
-            <div class="projectsContainer">
-                <div>
+            <div class="projectsContainer" id="projects">
+                <div class="projectText">
                     <h4>My projects</h4>
                     <p>Work that i have done in the past</p>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/product-displayed.jpg" />
+                    <div class="cardText">
+                        <h4>Barcode Scanner</h4>
+                        <p>Work that i have done in the past</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/image.png" />
+                    <div class="cardText">
+                        <h4>Blog</h4>
+                        <p>Work that i have done in the past</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/scienceMuseum.png" />
+                    <div class="cardText">
+                        <h4>Science museum</h4>
+                        <p>Work that i have done in the past</p>
+                    </div>
+                </div>
+                <div class="projectBtnContainer">
+                    <button>View all projects</button>
                 </div>
             </div>
             <div class="socialMediaContainer">
@@ -109,87 +152,13 @@
                     <p>Social media text</p>
                     <a>Follow me</a>
                 </div>
-                <div class="socialImg"></div>
-            </div>
-        </main>
-        <footer></footer>
-        <!-- <header>
-            <h1>My Portfolio</h1>
-        </header>
-        <main>
-            <div id="infoContainer">
-                <img/>
-                <div>
-                    <h2></h2>
-                    <h4></h4>
-                    <p></p>
+                <div class="socialImgContainer">
+                    <img src="/assets/images/philosopy.jpg" />
                 </div>
             </div>
-            <section class="cardContainer">
-                <div class="card">
-                    <img src="/assets/images/image.png" alt="Blog" />
-                    <h2>The BeerBlog</h2>
-                    <p>
-                        The app allows users to view static data about different
-                        beers, while the owner can create, edit, and delete
-                        posts by logging in. The blog is scaled for mobile,
-                        tablet, and desktop.
-                    </p>
-                    <div class="cardLinks">
-                        <a href="https://github.com/ChrisBerg03/TheBlog"
-                            >Github Repo</a
-                        >
-                        <a href="https://the-blog-peach.vercel.app/"
-                            >Live Demo</a
-                        >
-                    </div>
-                </div>
-                <div class="card">
-                    <img
-                        src="/assets/images/product-displayed.jpg"
-                        alt="A phone scanning a barcode"
-                    />
-                    <h2>Barcode Scanner</h2>
-                    <p>
-                        The Barcode Allergen Scanner is a web application
-                        designed to help users quickly access allergy
-                        information for various food products while shopping.
-                    </p>
-                    <div class="cardLinks">
-                        <a
-                            href="https://github.com/JNettli/010-BarcodeAllergenScanner"
-                            >Github Repo</a
-                        >
-                        <a href="https://midnightfalcons.netlify.app/"
-                            >Live Demo</a
-                        >
-                    </div>
-                </div>
-                <div class="card">
-                    <img
-                        src="/assets/images/scienceMuseum.png"
-                        alt="A science museum"
-                    />
-                    <h2>Science Museum</h2>
-                    <p>
-                        The Science Museum is a web application designed for a
-                        museum to display and update the public about events and
-                        relevant information.
-                    </p>
-                    <div class="cardLinks">
-                        <a href="https://github.com/ChrisBerg03/Science-Museum"
-                            >Github Repo</a
-                        >
-                        <a href="https://science-museum.vercel.app/"
-                            >Live Demo</a
-                        >
-                    </div>
-                </div>
-            </section>
         </main>
         <footer>
-            <div></div>
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
-        </footer> -->
+            <p>&copy; 2024 Chris. All rights reserved.</p>
+        </footer>
     </body>
 </html>
