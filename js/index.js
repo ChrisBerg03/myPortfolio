@@ -38,3 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+function toggleMenu() {
+    const menu = document.getElementById("infoTabContainer");
+    menu.classList.toggle("show");
+}
