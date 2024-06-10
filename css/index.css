@@ -4,6 +4,7 @@
 }
 
 html {
+    width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -18,6 +19,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 72px;
+    height: 120px;
+    position: relative;
 }
 
 #nameContainer {
@@ -72,7 +75,7 @@ header {
     position: relative;
     left: -800px;
     height: 728px;
-    width: 40vw;
+    width: 350px;
     animation: imgRight 1s forwards;
     z-index: 10;
 }
@@ -81,6 +84,7 @@ header {
     position: relative;
     left: 1200px;
     animation: textLeft 1.4s forwards;
+    max-width: 755px;
 }
 
 .heroText h1 {
@@ -129,6 +133,7 @@ header {
 
 #workExperienceContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -175,15 +180,19 @@ header {
 }
 
 .philosophyTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 100%;
-    padding: 120px 72px;
     background-color: rgb(255, 243, 228);
 }
 .philosophyTextContainer h2 {
     color: rgb(24, 24, 35);
     font-size: 55px;
     font-weight: 700;
+    text-align: center;
 }
 
 .philosopyImgContainer {
@@ -234,6 +243,7 @@ header {
 .skillsetContainer {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     background-color: #000;
@@ -245,12 +255,13 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0 0 0 80px;
+    padding: 0;
     gap: 25%;
 }
 
 .skillsets li {
-    width: 35%;
+    width: 25vw;
+    list-style: none;
 }
 
 .skillsetTextContainer h2,
@@ -283,6 +294,7 @@ header {
     color: #fff;
     row-gap: 32px;
     max-width: 1300px;
+    justify-content: center;
 }
 
 .projectsWidthContainer .card:nth-child(odd) {
@@ -309,6 +321,7 @@ header {
 .card {
     width: 48%;
     max-width: 500px;
+    min-width: 350px;
     background-color: rgb(24, 24, 35);
     border-radius: 16px;
     text-decoration: none;
@@ -402,5 +415,56 @@ footer {
 @keyframes textLeft {
     100% {
         left: -8%;
+    }
+}
+
+.burgerMenu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (max-width: 748px) {
+    .burgerMenu {
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+    #infoTabContainer {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        top: 80px;
+        left: 0;
+    }
+    #infoTabContainer.show {
+        display: flex;
+        padding: 0;
+        z-index: 20;
+    }
+    #infoTabContainer a {
+        padding: 20px;
+        text-align: center;
+    }
+    .heroText h1 {
+        font-size: 32px;
+    }
+    .heroText p {
+        font-size: 16px;
+    }
+    #workExperienceText p {
+        font-size: 40px;
+    }
+    #workExperienceContainer {
+        gap: 32px;
+    }
+    .philosophyTextContainer h2 {
+        font-size: 24px;
+    }
+    .projectsWidthContainer .card:nth-child(odd) {
+        transform: translateY(0);
     }
 }
