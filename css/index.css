@@ -294,7 +294,6 @@ header {
     color: #fff;
     row-gap: 32px;
     max-width: 1300px;
-    justify-content: center;
 }
 
 .projectsWidthContainer .card:nth-child(odd) {
